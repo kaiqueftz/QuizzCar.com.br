@@ -1,4 +1,4 @@
-function filtro(marca) { 
+function filtro(marca) {
 
     var todasAsMarcas = document.querySelectorAll('.marcas'); // Aqui, estamos selecionando todos os elementos com a classe 'marcas' e armazenando-os em uma variável.
 
@@ -48,3 +48,4 @@ botaoAceitaMensagem.addEventListener("click", aceitaMensagem);
 if(localStorage.getItem("aceitouCookie") == "aceito") {
     aceitaMensagem();
 }
+

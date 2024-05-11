@@ -1,4 +1,5 @@
-* {
+ /* Estilos base */
+ * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -7,17 +8,31 @@
 button {
   cursor: pointer;
 }
+
 #background-video {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  object-fit: cover; /* Isso faz com que o vídeo cubra toda a tela */
+  object-fit: cover; /* Garante que o vídeo cubra todo o espaço */
 }
+
+/* Estilos para telas pequenas de PC */
+@media only screen and (max-width: 1024px) {
+  #background-video {
+    object-fit: contain; /* Altera para "contain" em telas menores de PC */
+  }
+}
+
+/* Estilos para iPhones */
+@media only screen and (max-width: 375px) {
+  #background-video {
+    object-fit: cover; /* Mantém "cover" em iPhones */
+  }
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -26,52 +41,52 @@ button {
   height: 100%;
   z-index: -1;
   animation: mshiny 1.1s infinite alternate;
-  background-size: cover; /* Garante que a imagem de fundo cubra todo o contêiner */
-  background-repeat: no-repeat; /* Evita repetir a imagem */
-  background-position: center; /* Centraliza a imagem de fundo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/* Adicionando animações */
+
 .questions-container .answer {
-animation: shine 1.1s infinite alternate;
+  animation: shine 1.1s infinite alternate;
 }
 
 .hide {
-opacity: 0;
-pointer-events: none; /* Impede interação durante a animação */
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Animação para destacar respostas corretas ou incorretas */
 .answer {
-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .answer.correct {
-animation: highlight-correct 0.1s ease-in-out;
+  animation: highlight-correct 0.1s ease-in-out;
 }
 
 .answer.incorrect {
-animation: highlight-incorrect 0.5s ease-in-out;
+  animation: highlight-incorrect 0.5s ease-in-out;
 }
 
 @keyframes shine {
-0% { filter: brightness(1.5); }
-100% { filter: brightness(1); }
+  0% { filter: brightness(1.5); }
+  100% { filter: brightness(1); }
 }
 
 @keyframes highlight-correct {
-0% { background-color: var(--background-color); color: var(--background-color); } /* Usando a variável para a cor de fundo e texto */
-100% { background-color:  #049b48; color: #fff; }
+  0% { background-color: var(--background-color); color: var(--background-color); }
+  100% { background-color: #049b48; color: #fff; }
 }
 
 @keyframes highlight-incorrect {
-0% { background-color: var(--background-color); color: var(--background-color); } /* Usando a variável para a cor de fundo e texto */
-100% { background-color: #a10101; color: #fff; }
+  0% { background-color: var(--background-color); color: var(--background-color); }
+  100% { background-color: #a10101; color: #fff; }
 }
 
 @keyframes mshiny {
-0% { filter: brightness(1); }
-100% { filter: brightness(0.5); }
+  0% { filter: brightness(1); }
+  100% { filter: brightness(0.5); }
 }
+
 body {
   background-color: #ffffff;
   color: #fff;
@@ -81,10 +96,10 @@ body {
   align-items: center;
   font-family: 'fonteGeral', sans-serif;
 }
- 
+
 
 .container {
-  background-color: rgba(18, 18, 20, 0.7); /* Cor de fundo com transparência */
+  background-color: rgba(18, 18, 20, 0.7);
   width: 90%;
   max-width: 800px;
   border: 2px solid #e1e1e6;
@@ -135,7 +150,6 @@ body {
   border-radius: 6px;
   height: 48px;
   padding: 0 32px;
-
   transition: filter 0.1s;
 }
 
@@ -143,7 +157,6 @@ body {
   filter: brightness(0.8);
 }
 
-/* Finish game */
 .final-message {
   font-size: 20px;
   text-align: center;
@@ -154,7 +167,6 @@ body {
   margin-top: 8px;
 }
 
-/* General styles */
 .hide {
   display: none;
 }
@@ -166,3 +178,28 @@ body {
 .incorrect {
   background-color: #a10101;
 }
+
+/* Media Queries */
+
+/* Estilos para telas pequenas (celulares) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 8px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .question {
+    font-size: 24px;
+  }
+
+  .answers-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+ 
+
+  

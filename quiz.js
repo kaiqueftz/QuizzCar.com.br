@@ -54,8 +54,11 @@ function startGame() {
   $backgroundMusic.play();
   $startGameButton.classList.add("hide");
   $questionsContainer.classList.remove("hide");
+  
   shuffleQuestions(); // Embaralha as perguntas e as imagens
   displayNextQuestion();
+  $background.style.backgroundImage = `url('${questionBackgrounds[currentQuestionIndex]}')`;
+  $backgroundVideo.style.display = "none"; // Oculta o vídeo
 }
 
 // Função para exibir a próxima pergunta
