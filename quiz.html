@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="quiz.css">
+  <script src="quiz.js" async></script>
+
+  <title>Quiz JavaScript</title>
+</head>
+<body>
+  <audio autoplay loop id="background-music" preload="auto">
+    <source src="img/Fotos pro Quiz/FutureMusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <video autoplay muted loop id="background-video">
+    <source src="img/Fotos pro Quiz/VideoInicioVibes.mp4" type="video/mp4"> <!-- Substitua 'caminho/para/seu/video.mp4' pelo caminho real do seu vídeo -->
+    Your browser does not support HTML5 video.
+  </video>
+  <div id="background" class="background"></div>
+  <div class="container">
+    <div class="questions-container hide">
+      <span class="question">Pergunta aqui?</span>
+      <div class="answers-container">
+        <button class="answer button">Resposta 1</button>
+        <button class="answer button">Resposta 2</button>
+        <button class="answer button">Resposta 3</button>
+        <button class="answer button">Resposta 4</button>
+      </div>
+    </div>
+    <div class="controls-container">
+      <button class="start-quiz button">Começar Quiz!</button>
+      
+      <button class="next-question button hide">Próxima pergunta</button>
+    </div>
+  </div>
+</body>
+</html>

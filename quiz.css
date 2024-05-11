@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover; /* Isso faz com que o vídeo cubra toda a tela */
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: mshiny 1.1s infinite alternate;
+  background-size: cover; /* Garante que a imagem de fundo cubra todo o contêiner */
+  background-repeat: no-repeat; /* Evita repetir a imagem */
+  background-position: center; /* Centraliza a imagem de fundo */
+}
+/* Adicionando animações */
+.questions-container .answer {
+animation: shine 1.1s infinite alternate;
+}
+
+.hide {
+opacity: 0;
+pointer-events: none; /* Impede interação durante a animação */
+}
+
+/* Animação para destacar respostas corretas ou incorretas */
+.answer {
+transition: background-color 0.2s ease-in-out;
+}
+
+.answer.correct {
+animation: highlight-correct 0.1s ease-in-out;
+}
+
+.answer.incorrect {
+animation: highlight-incorrect 0.5s ease-in-out;
+}
+
+@keyframes shine {
+0% { filter: brightness(1.5); }
+100% { filter: brightness(1); }
+}
+
+@keyframes highlight-correct {
+0% { background-color: var(--background-color); color: var(--background-color); } /* Usando a variável para a cor de fundo e texto */
+100% { background-color:  #049b48; color: #fff; }
+}
+
+@keyframes highlight-incorrect {
+0% { background-color: var(--background-color); color: var(--background-color); } /* Usando a variável para a cor de fundo e texto */
+100% { background-color: #a10101; color: #fff; }
+}
+
+@keyframes mshiny {
+0% { filter: brightness(1); }
+100% { filter: brightness(0.5); }
+}
+body {
+  background-color: #ffffff;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'fonteGeral', sans-serif;
+}
+ 
+
+.container {
+  background-color: rgba(18, 18, 20, 0.7); /* Cor de fundo com transparência */
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid #e1e1e6;
+  border-radius: 7px;
+  padding: 16px;
+  box-shadow: 0 0 2px 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.question {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answers-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.answer:disabled {
+  cursor: not-allowed;
+}
+
+.next-question {
+  margin-top: 32px;
+}
+
+.button {
+  background-color: #4863f7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 48px;
+  padding: 0 32px;
+
+  transition: filter 0.1s;
+}
+
+.button:not(:disabled):hover {
+  filter: brightness(0.8);
+}
+
+/* Finish game */
+.final-message {
+  font-size: 20px;
+  text-align: center;
+}
+
+.final-message span {
+  display: block;
+  margin-top: 8px;
+}
+
+/* General styles */
+.hide {
+  display: none;
+}
+
+.correct {
+  background-color: #049b48;
+}
+
+.incorrect {
+  background-color: #a10101;
+}

@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.banner {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.filtros {
+    
+    p {
+        margin-left: 18px;
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #textoFiltro {
+        height: 25px;
+    }
+
+    button {
+        width: auto;
+        height: 22px;
+        background-color:rgba(179, 179, 179, 0.829)e;
+        border-color: rgb(212, 212, 212);
+        border-radius: 3px;
+    }
+}
+
+.iniciarQuizz {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    button {
+        width: auto; /* Largura automática para se ajustar ao conteúdo */
+        height: 40px; 
+        border-radius: 10px;
+        background-color: rgb(0, 255, 0);
+        border-color: gray;
+        font-family: 'fonteGeral';
+        padding: 0 20px; /* Adiciona um espaço interno ao botão */
+    }
+}
+
+.logo-click {
+
+    text-align: center;
+    margin-top: 30px;
+
+    img {
+        max-width: 50px; 
+        height: auto; 
+    }
+}
+
+.marcas {
+
+    .container-card {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+        justify-content: space-around; /* Distribui uniformemente os espaços ao redor dos itens */
+    }
+
+    .cards {
+        height: 170px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .cards::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(transparent, #ffffff);
+    }
+
+    #btn-continuar {
+        width: auto;
+        height: 22px;
+        background-color:rgba(179, 179, 179, 0.829)e;
+        border-color: rgb(212, 212, 212);
+        border-radius: 3px;
+        margin-top: 30%;
+    }
+
+    .botaoContinuar {
+        text-align: center;
+    }
+}
+
+.marcas.active .cards{
+    height: auto;
+}
+
+.marcas.active .cards::before {
+    visibility: hidden;
+}
+
+.card {
+    width: 20%; /* Por padrão, cada card ocupará 45% da largura do seu contêiner */
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%; /* A imagem dentro do card ocupará 100% da largura do card */
+        height: 80%; /* Mantém a proporção da imagem */
+        border-radius: 5px;
+    }
+
+    #categoryCarros {
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #sobrenomeCarros {
+        font-family: 'fonteSobrenomeCarros';
+        color: rgba(92, 92, 92, 0.918);
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.mensagem-usuario {
+    font-family: 'fonteGeral';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(109, 109, 109, 0.877);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+#botao-aceita-mensagem {
+    font-family: 'fonteSobrenomeCarros';
+    width: 50px;
+    height: 22px;
+    margin-top: 10px;
+    background-color:rgba(179, 179, 179, 0.829)e;
+    border-color: rgb(212, 212, 212);
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media screen and (max-width: 520px) {
+    .card {
+        width: 90%; 
+    }
+}
+
+@media screen and (min-width: 521px) and (max-width: 768px) {
+    .card {
+        width: 45%; 
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 2000px) {
+    .card #categoryCarros {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .card #sobrenomeCarros {
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .card #categoryCarros {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .card #sobrenomeCarros {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width: 319px) {
+    .card #categoryCarros {
+        text-align: center;
+        font-size: 7px;
+    }
+
+    .card #sobrenomeCarros {
+        text-align: center;
+        font-size: 7px;
+    }
+}
+
+@font-face {
+    font-family: 'fonteGeral';
+    src: url(font/Nexa-Heavy.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'fonteSobrenomeCarros';
+    src: url(font/secrcode.ttf);
+}

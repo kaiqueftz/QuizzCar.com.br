@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quizz de Carros</title>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="banner">
+            <img src="img/banner.png" alt="banner">
+        </div>
+
+        <div class="filtros">
+            <p>
+                <button id="textoFiltro"> FILTRAR POR: </button> 
+                <button onclick="filtro('TODOS')">TODOS</button> <!--ONCLICK SERVE PARA DETERMINAR ALGUMA FUNÇÃO QUANDO CLICADO, NESSE CASO A FUNÇÃO "FILTRO" ADICIONADA EM JS-->
+                <button onclick="filtro('FERRARI')">FERRARI</button> 
+                <button onclick="filtro('BMW')">BMW</button> 
+                <button onclick="filtro('FORD')">FORD</button>
+                <button onclick="filtro('VOLVO')">VOLVO</button>
+                <button onclick="filtro('PEUGEOT')">PEUGEOT</button>
+            </p>
+        </div>
+
+        <div class="iniciarQuizz">
+            <a href="quiz.html"><button>TESTAR CONHECIMENTO</button></a>
+        </div>
+
+        <div class="container-galeria">
+            
+            <div class="marcas" id="ferrari">
+
+                <div class="logo-click">
+                    <img src="img/Ferrari/logoFerrari-removebg-preview.png">
+                </div>
+
+                <div class="container-card">
+
+                    <div class="cards">
+
+                        <div class="container-card" id="open-cards">
+
+                            <div class="card">
+                                <img src="img/Ferrari/FERRARI F488 PISTA 2019 002.jpg">
+                                <p id="categoryCarros">FERRARI <p id="sobrenomeCarros">F488 PISTA 2019 002</p></p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/Ferrari/FERRARI MONZA SP1 BY NOVITEC 2020 01.jpg">
+                                <p id="categoryCarros">FERRARI</p>
+                                <p id="sobrenomeCarros">MONZA SP1 BY NOVITEC 2020</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/Ferrari/ferrari-f296-gt3-2022-01-20220730204252-1920x1080.jpg">
+                                <p id="categoryCarros">FERRARI</p>
+                                <p id="sobrenomeCarros">F296 GT 3 2022</p>
+                            </div>
+
+                            <div class="card" id="card4-1">
+                                <img src="img/Ferrari//FERRARI PORTOFINO BY MANSORY 2021 01.jpg">
+                                <p id="categoryCarros">FERRARI</p>
+                                <p id="sobrenomeCarros">PORTOFINO BY MANSORY 2021</p>
+                            </div>
+
+                            <!--2°Bloco-->
+                            <div class="card">
+                                <img src="img/Ferrari/FERRARI ROMA 2020 0002.jpg">
+                                <p id="categoryCarros">ROMA 2020<p id="sobrenomeCarros">296 GTS 2023</p></p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/Ferrari/FERRARI STALLONE BY MURRAY SHARP 2020 01.jpg">
+                                <p id="categoryCarros">FERRARI</p>
+                                <p id="sobrenomeCarros">STALLONE BY MURRAY SHARP 2020</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/Ferrari/ferrari-sf90-spider-f9xx-tempesta-celeste-by-mansory-2023-01-20230315184034-1600x1066.jpg">
+                                <p id="categoryCarros">FERRARI</p>
+                                <p id="sobrenomeCarros">SF90 SPIDER</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/Ferrari/FERRARI BREADVAN HOMMAGE 2021 003.jpg">
+                                <p id="categoryCarros">FERRARI</p>
+                                <p id="sobrenomeCarros">BREADVAN HOMMAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="botaoContinuar">
+                        <button id="btn-continuar">CONTINUAR</button> 
+                    </div>
+
+            </div>
+
+            <div class="marcas" id="bmw">
+                <div class="logo-click">
+                    <img src="img/BMW/7f35101aba17c746beeca0774ace6c12.png">
+                </div>
+
+                <div class="container-card">
+
+                    <div class="card">
+                        <img src="img/BMW/bmw-x1-2023-004-20230322102116-1280x925.jpg">
+                        <p id="categoryCarros">BMW</p>
+                        <p id="sobrenomeCarros">X1 2023</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/BMW/bmw-x5-by-larte-design-2024-01-20240217103959-1600x1066.jpg">
+                        <p id="categoryCarros">BMW</p>
+                        <p id="sobrenomeCarros">X5 2024</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/BMW/bmw-i7-xdrive60-us-version-2023-037-20221204184349-1280x925.jpg">
+                        <p id="categoryCarros">BMW</p>
+                        <p id="sobrenomeCarros">I7 2023</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/BMW/bmw-i5-lwb-ch-version-2024-02-20230815103252-1280x925.jpg">
+                        <p id="categoryCarros">BMW</p>
+                        <p id="sobrenomeCarros">I5 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marcas" id="ford">
+                <div class="logo-click">
+                    <img src="img/ford/logoford-removebg-preview.png">
+                </div>
+
+                <div class="container-card">
+
+                    <div class="card">
+                        <img src="img/ford/ford-bronco-by-roush-2023-01-20221221102343-1920x1080.jpg">
+                        <p id="categoryCarros">FORD</p>
+                        <p id="sobrenomeCarros">BRONCO 2023</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/ford/ford-f-250-shelby-super-baja-2024-16-20231111162540-1600x1066.jpg">
+                        <p id="categoryCarros">FORD</p>
+                        <p id="sobrenomeCarros">F-250 SHELBY 2024</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/ford/ford-mustang-gt-gen3-supercar-2023-01-20221008201730-1280x925.jpg">
+                        <p id="categoryCarros">FORD</p>
+                        <p id="sobrenomeCarros">MUSTANG GT-3 2023</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/ford/ford-ranger-platinum-2023-01-20221130140950-1600x1067.jpg">
+                        <p id="categoryCarros">FORD</p>
+                        <p id="sobrenomeCarros"> RANGER PLATINUM 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marcas" id="volvo">
+                <div class="logo-click">
+                    <img src="img/volvo/logoVolvo-removebg-preview.png">
+                </div>
+
+                <div class="container-card">
+
+                    <div class="card">
+                        <img src="img/volvo/VOLVO S60 2019 002.jpg">
+                        <p id="categoryCarros">VOLVO</p>
+                        <p id="sobrenomeCarros">S60 2019</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/volvo/VOLVO XC60 2022 01.jpg">
+                        <p id="categoryCarros">VOLVO</p>
+                        <p id="sobrenomeCarros">X60 2022</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/volvo/VOLVO_COUPE_CONCEPT_2013_01.jpg">
+                        <p id="categoryCarros">VOLVO</p>
+                        <p id="sobrenomeCarros">COUPE 2013</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/ford/ford-ranger-platinum-2023-01-20221130140950-1600x1067.jpg">
+                        <p id="categoryCarros">FORD</p>
+                        <p id="sobrenomeCarros">RANGER PLATINUM 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marcas" id="peugeot">
+                <div class="logo-click">
+                    <img src="img/peugeot/2c47e6efb19dcb6d65b17195d9531e8f-removebg-preview.png">
+                </div>
+
+                <div class="container-card">
+
+                    <div class="card">
+                        <img src="img/peugeot/peugeot-206-2003-02-20240408162101-1600x1156.jpg">
+                        <p id="categoryCarros">PEUGEOT</p>
+                        <p id="sobrenomeCarros">206</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/peugeot/peugeot-208.jpg">
+                        <p id="categoryCarros">PEUGEOT</p>
+                        <p id="sobrenomeCarros">208</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/peugeot/peugeot-308-2012-09-20240415220700-1600x1067.jpg">
+                        <p id="categoryCarros">PEUGEOT</p>
+                        <p id="sobrenomeCarros">308</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/peugeot/peugeot-rcz-2010-02-20240415120046-1600x1156.jpg">
+                        <p id="categoryCarros">PEUGEOT</p>
+                        <p id="sobrenomeCarros">RCZ</p>
+                    </div>
+                </div>
+            </div>
+                <!--(ATENÇÃO) SE FOR ADICIONAR MAIS, COLOQUE A PARTIR DESSE ESPAÇO-->
+            </div>
+        </div>
+    </div>
+
+    <div id="container-mensagem-usuario" class="mensagem-usuario">
+        <p>Aceita nossos Cookies?</p>
+        <button id="botao-aceita-mensagem">Aceitar</button>
+    </div>
+
+    <script src="script.js" async></script>
+
+</body>
+
+</html>
