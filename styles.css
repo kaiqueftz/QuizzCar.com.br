@@ -23,14 +23,31 @@
 
     #textoFiltro {
         height: 25px;
+        font-family: 'fonteKanit';
+    }
+
+    .FonteMarcas {
+        height: 25px;
+        font-family: 'fonteKanit';
+        font-weight: bolder;
+
+        background-color: #f0f0f0;
+        color: rgba(36, 36, 36, 0.534);
+        transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+    }
+    
+    .FonteMarcas:hover {
+        background-color: #12149b46; /* Escurece a cor no hover */
     }
 
     button {
         width: auto;
         height: 22px;
         background-color:rgba(179, 179, 179, 0.829)e;
-        border-color: rgb(212, 212, 212);
-        border-radius: 3px;
+        border-color: rgba(212, 212, 212, 0.219);
+        border-radius: 4px;
+        padding: 5px 5px 25px 5px; /* Adiciona um espaço interno ao botão */
+        box-shadow: rgba(0, 0, 0, 0.247) 0px 2px 2px, rgba(0, 0, 0, 0.171) 0px 3px 5px -3px, rgba(0, 0, 0, 0.082) 0px -3px 0px inset;
     }
 }
 
@@ -44,9 +61,15 @@
         height: 40px;
         border-radius: 10px;
         background-color: rgb(0, 255, 0);
-        border-color: gray;
+        border-color: rgba(128, 128, 128, 0.205);
         font-family: 'fonteGeral';
         padding: 0 20px; /* Adiciona um espaço interno ao botão */
+        transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    button:hover {
+        background-color: #4cff3c9c; /* Escurece a cor no hover */
     }
 }
 
@@ -58,7 +81,22 @@
     img {
         max-width: 50px;
         height: auto;
+        transition: 1;
     }
+
+    img:hover {
+        transform: scale(1.2); /* Aumenta a imagem em 10% */
+        transition: transform 0.6s ease; /* Adiciona uma transição suave */
+    }
+
+    img:not(:hover) {
+        transition: transform 0.5s;
+    }
+
+    img.pointer {
+        cursor: pointer;
+    }
+
 }
 
 .marcas {
@@ -88,14 +126,29 @@
         width: auto;
         height: 22px;
         background-color:rgba(179, 179, 179, 0.829)e;
-        border-color: rgb(212, 212, 212);
-        border-radius: 3px;
+        border-color: rgba(212, 212, 212, 0.671);
+        border-radius: 5px;
         margin-top: 30%;
+        text-align: center;
+        font-family: 'fonteKanit';
+        font-weight: bold;
+        padding: 5px 5px 25px 5px; /* Adiciona um espaço interno ao botão */
+        box-shadow: rgba(0, 0, 0, 0.247) 0px 2px 4px, rgba(0, 0, 0, 0.171) 0px 7px 10px -3px, rgba(0, 0, 0, 0.082) 0px -3px 0px inset;
     }
 
-    .botaoContinuar {
-        text-align: center;
+    #btn-continuar:hover {
+        filter: brightness(0.8); /* Escurece a imagem em 20% */
+        transition: filter 0.6s; /* Adiciona uma transição suave */
     }
+
+    #btn-continuar:not(:hover) {
+        transition: filter 0.5s;
+    }
+
+    #btn-continuar:hover.pointer {
+        cursor: pointer;
+    }
+    
 }
 
 .marcas.active .cards{
@@ -132,6 +185,15 @@
         font-size: 12px;
         text-align: center;
     }
+}
+
+.card {
+    /* Outras propriedades do card */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move os elementos 5 pixels para cima */
 }
 
 .mensagem-usuario {
@@ -209,15 +271,6 @@
     }
 }
 
-@font-face {
-    font-family: 'fonteGeral';
-    src: url(font/Nexa-Heavy.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'fonteSobrenomeCarros';
-    src: url(font/secrcode.ttf);
-}
 @media screen and (min-width: 1005px) and (max-width: 1800px) {
     .card #categoryCarros, #sobrenomeCarros {
         text-align: center;
@@ -233,4 +286,14 @@
 @font-face {
     font-family: 'fonteSobrenomeCarros';
     src: url(font/secrcode.ttf);
+}
+
+@font-face {
+    font-family: 'fonteKanit';
+    src: url(font/kanit/Kanit-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'fonteAnton';
+    src: url(font/Anton/Anton-Regular.ttf);
 }

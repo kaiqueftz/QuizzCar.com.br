@@ -18,12 +18,12 @@
         <div class="filtros">
             <p>
                 <button id="textoFiltro"> FILTRAR POR: </button>
-                <button onclick="filtro('TODOS')">TODOS</button> <!--ONCLICK SERVE PARA DETERMINAR ALGUMA FUNÇÃO QUANDO CLICADO, NESSE CASO A FUNÇÃO "FILTRO" ADICIONADA EM JS-->
-                <button onclick="filtro('FERRARI')">FERRARI</button>
-                <button onclick="filtro('BMW')">BMW</button>
-                <button onclick="filtro('FORD')">FORD</button>
-                <button onclick="filtro('VOLVO')">VOLVO</button>
-                <button onclick="filtro('PEUGEOT')">PEUGEOT</button>
+                <button class="FonteMarcas" onclick="filtro('TODOS')">TODOS</button> <!--ONCLICK SERVE PARA DETERMINAR ALGUMA FUNÇÃO QUANDO CLICADO, NESSE CASO A FUNÇÃO "FILTRO" ADICIONADA EM JS-->
+                <button class="FonteMarcas" onclick="filtro('FERRARI')">FERRARI</button>
+                <button class="FonteMarcas" onclick="filtro('BMW')">BMW</button>
+                <button class="FonteMarcas" onclick="filtro('FORD')">FORD</button>
+                <button class="FonteMarcas" onclick="filtro('VOLVO')">VOLVO</button>
+                <button class="FonteMarcas" onclick="filtro('PEUGEOT')">PEUGEOT</button>
             </p>
         </div>
 
@@ -36,7 +36,7 @@
             <div class="marcas" id="ferrari">
 
                 <div class="logo-click">
-                    <img src="img/Ferrari/logoFerrari-removebg-preview.png">
+                    <img src="img/Ferrari/logoFerrari-removebg-preview.png" class="pointer"> 
                 </div>
 
                 <div class="container-card">
@@ -95,17 +95,19 @@
                     </div>
 
                     <div class="botaoContinuar">
-                        <button id="btn-continuar">CONTINUAR</button>
+                        <button id="btn-continuar">
+                            <span>CONTINUAR</span>
+                        </button>
                     </div>
 
             </div>
 
             <div class="marcas" id="bmw">
                 <div class="logo-click">
-                    <img src="img/BMW/7f35101aba17c746beeca0774ace6c12.png">
+                    <img src="img/BMW/7f35101aba17c746beeca0774ace6c12.png" class="pointer">
                 </div>
 
-                <div class="container-card">
+                <div class="container-card" id="open-cards">
 
                     <div class="card">
                         <img src="img/BMW/bmw-x1-2023-004-20230322102116-1280x925.jpg">
@@ -135,7 +137,7 @@
 
             <div class="marcas" id="ford">
                 <div class="logo-click">
-                    <img src="img/ford/logoford-removebg-preview.png">
+                    <img src="img/ford/logoford-removebg-preview.png" class="pointer">
                 </div>
 
                 <div class="container-card">
@@ -168,7 +170,7 @@
 
             <div class="marcas" id="volvo">
                 <div class="logo-click">
-                    <img src="img/volvo/logoVolvo-removebg-preview.png">
+                    <img src="img/volvo/logoVolvo-removebg-preview.png" class="pointer">
                 </div>
 
                 <div class="container-card">
@@ -201,7 +203,7 @@
 
             <div class="marcas" id="peugeot">
                 <div class="logo-click">
-                    <img src="img/peugeot/2c47e6efb19dcb6d65b17195d9531e8f-removebg-preview.png">
+                    <img src="img/peugeot/2c47e6efb19dcb6d65b17195d9531e8f-removebg-preview.png" class="pointer">
                 </div>
 
                 <div class="container-card">
