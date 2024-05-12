@@ -1,3 +1,4 @@
+//FUNÇÃO DE FILTRAGEM, TOPO PÁGINA
 function filtro(marca) {
 
     var todasAsMarcas = document.querySelectorAll('.marcas'); // Aqui, estamos selecionando todos os elementos com a classe 'marcas' e armazenando-os em uma variável.
@@ -13,19 +14,35 @@ function filtro(marca) {
     });
 }
 
-var button = document.getElementById('btn-continuar');
+//BOTÃO (CONTINUAR) FERRARI
+var buttonFerrari = document.getElementById('btn-continuarFerrari');
 
-button.addEventListener('click', function() {
-    var card = document.querySelector('.marcas')
+buttonFerrari.addEventListener('click', function() {
+    var card = document.querySelector('#ferrari')
     card.classList.toggle('active');
 
     if(card.classList.contains('active')) {
-        return button.textContent = 'FECHAR'
+        return buttonFerrari.textContent = 'FECHAR'
     }
 
-    button.textContent = 'CONTINUAR';
+    buttonFerrari.textContent = 'CONTINUAR';
 });
 
+//BOTÃO (CONTINUAR) BMW
+var buttonBmw = document.getElementById('btn-continuarBmw');
+
+buttonBmw.addEventListener('click', function() {
+    var card = document.querySelector('#bmw')
+    card.classList.toggle('active');
+
+    if(card.classList.contains('active')) {
+        return buttonBmw.textContent = 'FECHAR'
+    }
+
+    buttonBmw.textContent = 'CONTINUAR';
+});
+
+//EFEITO LOGO-CLICK
 document.querySelectorAll('.logo-click').forEach(function(logo) { // Este loop forEach seleciona todas as divs com a classe 'logo-click' e adiciona um ouvinte de eventos de clique a cada uma.
     // Adiciona um ouvinte de eventos de clique a cada div de logo
     logo.addEventListener('click', function() { // Aqui, adicionamos um ouvinte de eventos de clique a cada div com a classe 'logo-click'.
@@ -36,6 +53,7 @@ document.querySelectorAll('.logo-click').forEach(function(logo) { // Este loop f
     });
 });
 
+//MENSAGEM ACEITA COOKIES
 function aceitaMensagem() {
     let divMensagemUsuario = document.getElementById("container-mensagem-usuario");
     divMensagemUsuario.classList.add("oculto");

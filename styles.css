@@ -46,7 +46,7 @@
         background-color:rgba(179, 179, 179, 0.829)e;
         border-color: rgba(212, 212, 212, 0.219);
         border-radius: 4px;
-        padding: 5px 5px 25px 5px; /* Adiciona um espaço interno ao botão */
+        padding: opx 5px 25px 0px; /* Adiciona um espaço interno ao botão */
         box-shadow: rgba(0, 0, 0, 0.247) 0px 2px 2px, rgba(0, 0, 0, 0.171) 0px 3px 5px -3px, rgba(0, 0, 0, 0.082) 0px -3px 0px inset;
     }
 }
@@ -122,7 +122,22 @@
         background: linear-gradient(transparent, #ffffff);
     }
 
-    #btn-continuar {
+    .cardsBMW {
+        height: 170px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .cardsBMW::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(transparent, #ffffff);
+    }
+
+    #btn-continuarFerrari {
         width: auto;
         height: 22px;
         background-color:rgba(179, 179, 179, 0.829)e;
@@ -136,26 +151,61 @@
         box-shadow: rgba(0, 0, 0, 0.247) 0px 2px 4px, rgba(0, 0, 0, 0.171) 0px 7px 10px -3px, rgba(0, 0, 0, 0.082) 0px -3px 0px inset;
     }
 
-    #btn-continuar:hover {
+    #btn-continuarFerrari:hover {
         filter: brightness(0.8); /* Escurece a imagem em 20% */
         transition: filter 0.6s; /* Adiciona uma transição suave */
     }
 
-    #btn-continuar:not(:hover) {
+    #btn-continuarFerrari:not(:hover) {
         transition: filter 0.5s;
     }
 
-    #btn-continuar:hover.pointer {
+    #btn-continuarFerrari:hover.pointer {
+        cursor: pointer;
+    }
+
+    #btn-continuarBmw {
+        width: auto;
+        height: 22px;
+        background-color:rgba(179, 179, 179, 0.829)e;
+        border-color: rgba(212, 212, 212, 0.671);
+        border-radius: 5px;
+        margin-top: 30%;
+        text-align: center;
+        font-family: 'fonteKanit';
+        font-weight: bold;
+        padding: 5px 5px 25px 5px; /* Adiciona um espaço interno ao botão */
+        box-shadow: rgba(0, 0, 0, 0.247) 0px 2px 4px, rgba(0, 0, 0, 0.171) 0px 7px 10px -3px, rgba(0, 0, 0, 0.082) 0px -3px 0px inset;
+    }
+
+    #btn-continuarBmw:hover {
+        filter: brightness(0.8); /* Escurece a imagem em 20% */
+        transition: filter 0.6s; /* Adiciona uma transição suave */
+    }
+
+    #btn-continuarBmw:not(:hover) {
+        transition: filter 0.5s;
+    }
+
+    #btn-continuarBmw:hover.pointer {
         cursor: pointer;
     }
     
 }
 
-.marcas.active .cards{
+#ferrari.active .cards{
     height: auto;
 }
 
-.marcas.active .cards::before {
+#ferrari.active .cards::before {
+    visibility: hidden;
+}
+
+#bmw.active .cardsBMW{
+    height: auto;
+}
+
+#bmw.active .cardsBMW::before {
     visibility: hidden;
 }
 

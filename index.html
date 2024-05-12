@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,18 @@
 </head>
 
 <body>
-   
+
     <div class="container">
 
         <div class="banner">
-            <img src="img/banner.png" alt="banner">
+            <img src="img/banner (2).png" alt="banner">
         </div>
 
         <div class="filtros">
             <p>
                 <button id="textoFiltro"> FILTRAR POR: </button>
-                <button class="FonteMarcas" onclick="filtro('TODOS')">TODOS</button> <!--ONCLICK SERVE PARA DETERMINAR ALGUMA FUNÇÃO QUANDO CLICADO, NESSE CASO A FUNÇÃO "FILTRO" ADICIONADA EM JS-->
+                <button class="FonteMarcas" onclick="filtro('TODOS')">TODOS</button>
+                <!--ONCLICK SERVE PARA DETERMINAR ALGUMA FUNÇÃO QUANDO CLICADO, NESSE CASO A FUNÇÃO "FILTRO" ADICIONADA EM JS-->
                 <button class="FonteMarcas" onclick="filtro('FERRARI')">FERRARI</button>
                 <button class="FonteMarcas" onclick="filtro('BMW')">BMW</button>
                 <button class="FonteMarcas" onclick="filtro('FORD')">FORD</button>
@@ -32,11 +34,11 @@
         </div>
 
         <div class="container-galeria">
-           
+
             <div class="marcas" id="ferrari">
 
                 <div class="logo-click">
-                    <img src="img/Ferrari/logoFerrari-removebg-preview.png" class="pointer"> 
+                    <img src="img/Ferrari/logoFerrari-removebg-preview.png" class="pointer">
                 </div>
 
                 <div class="container-card">
@@ -47,7 +49,9 @@
 
                             <div class="card">
                                 <img src="img/Ferrari/FERRARI F488 PISTA 2019 002.jpg">
-                                <p id="categoryCarros">FERRARI <p id="sobrenomeCarros">F488 PISTA 2019 002</p></p>
+                                <p id="categoryCarros">FERRARI
+                                <p id="sobrenomeCarros">F488 PISTA 2019 002</p>
+                                </p>
                             </div>
 
                             <div class="card">
@@ -62,7 +66,7 @@
                                 <p id="sobrenomeCarros">F296 GT 3 2022</p>
                             </div>
 
-                            <div class="card" id="card4-1">
+                            <div class="card">
                                 <img src="img/Ferrari//FERRARI PORTOFINO BY MANSORY 2021 01.jpg">
                                 <p id="categoryCarros">FERRARI</p>
                                 <p id="sobrenomeCarros">PORTOFINO BY MANSORY 2021</p>
@@ -71,7 +75,9 @@
                             <!--2°Bloco-->
                             <div class="card">
                                 <img src="img/Ferrari/FERRARI ROMA 2020 0002.jpg">
-                                <p id="categoryCarros">ROMA 2020<p id="sobrenomeCarros">296 GTS 2023</p></p>
+                                <p id="categoryCarros">ROMA 2020
+                                <p id="sobrenomeCarros">296 GTS 2023</p>
+                                </p>
                             </div>
 
                             <div class="card">
@@ -81,7 +87,8 @@
                             </div>
 
                             <div class="card">
-                                <img src="img/Ferrari/ferrari-sf90-spider-f9xx-tempesta-celeste-by-mansory-2023-01-20230315184034-1600x1066.jpg">
+                                <img
+                                    src="img/Ferrari/ferrari-sf90-spider-f9xx-tempesta-celeste-by-mansory-2023-01-20230315184034-1600x1066.jpg">
                                 <p id="categoryCarros">FERRARI</p>
                                 <p id="sobrenomeCarros">SF90 SPIDER</p>
                             </div>
@@ -95,11 +102,11 @@
                     </div>
 
                     <div class="botaoContinuar">
-                        <button id="btn-continuar">
+                        <button id="btn-continuarFerrari">
                             <span>CONTINUAR</span>
                         </button>
                     </div>
-
+                </div>
             </div>
 
             <div class="marcas" id="bmw">
@@ -107,30 +114,66 @@
                     <img src="img/BMW/7f35101aba17c746beeca0774ace6c12.png" class="pointer">
                 </div>
 
-                <div class="container-card" id="open-cards">
+                <div class="container-card">
 
-                    <div class="card">
-                        <img src="img/BMW/bmw-x1-2023-004-20230322102116-1280x925.jpg">
-                        <p id="categoryCarros">BMW</p>
-                        <p id="sobrenomeCarros">X1 2023</p>
+                    <div class="cardsBMW">
+
+                        <div class="container-card" id="open-cards">
+
+                            <div class="card">
+
+                                <img src="img/BMW/bmw-x1-2023-004-20230322102116-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">X1 2023</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/BMW/bmw-x5-by-larte-design-2024-01-20240217103959-1600x1066.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">X5 2024</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/BMW/bmw-i7-xdrive60-us-version-2023-037-20221204184349-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">I7 2023</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/BMW/bmw-i5-lwb-ch-version-2024-02-20230815103252-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">I5 2024</p>
+                            </div>
+                            <!--2° BLOCO BMW-->
+                            <div class="card">
+                                <img src="img/BMW/bmw-x5-2024-019-20230208153035-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">X5 2024</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/BMW/bmw-3-series-sedan-2023-26-20220523145100-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">3 SERIES 2023</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/BMW/bmw-8-series-gran-coupe-2023-02-20220128160737-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">8 SERIES GRAN COUPE 2023</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/BMW/bmw-z4-m40i-6mt-2025-002-20240131193029-1280x925.jpg">
+                                <p id="categoryCarros">BMW</p>
+                                <p id="sobrenomeCarros">Z4 M40i 2025</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="card">
-                        <img src="img/BMW/bmw-x5-by-larte-design-2024-01-20240217103959-1600x1066.jpg">
-                        <p id="categoryCarros">BMW</p>
-                        <p id="sobrenomeCarros">X5 2024</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="img/BMW/bmw-i7-xdrive60-us-version-2023-037-20221204184349-1280x925.jpg">
-                        <p id="categoryCarros">BMW</p>
-                        <p id="sobrenomeCarros">I7 2023</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="img/BMW/bmw-i5-lwb-ch-version-2024-02-20230815103252-1280x925.jpg">
-                        <p id="categoryCarros">BMW</p>
-                        <p id="sobrenomeCarros">I5 2024</p>
+                    <div class="botaoContinuar">
+                        <button id="btn-continuarBmw">
+                            <span>CONTINUAR</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -143,6 +186,7 @@
                 <div class="container-card">
 
                     <div class="card">
+
                         <img src="img/ford/ford-bronco-by-roush-2023-01-20221221102343-1920x1080.jpg">
                         <p id="categoryCarros">FORD</p>
                         <p id="sobrenomeCarros">BRONCO 2023</p>
@@ -233,9 +277,9 @@
                     </div>
                 </div>
             </div>
-                <!--(ATENÇÃO) SE FOR ADICIONAR MAIS, COLOQUE A PARTIR DESSE ESPAÇO-->
-            </div>
+            <!--(ATENÇÃO) SE FOR ADICIONAR MAIS, COLOQUE A PARTIR DESSE ESPAÇO-->
         </div>
+    </div>
     </div>
 
     <div id="container-mensagem-usuario" class="mensagem-usuario">
