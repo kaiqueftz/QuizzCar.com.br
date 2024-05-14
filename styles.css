@@ -73,6 +73,10 @@
     }
 }
 
+.container{
+    margin-bottom: 3%;
+}
+
 .logo-click {
 
     text-align: center;
@@ -271,6 +275,22 @@
 
 .oculto {
     display: none;
+}
+
+footer {
+    background-color: #b1b1b138;
+    padding: 20px;
+    text-align: center;
+    font-family: 'fonteGeral';
+
+    .agradecimentos {
+        font-size: 14px;
+        color: #6d6d6d;
+    }
+
+    .agradecimentos span {
+        margin: 0 10px;
+    }
 }
 
 @media screen and (max-width: 520px) {
