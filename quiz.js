@@ -35,7 +35,22 @@ const questionBackgrounds = [
   "img/Fotos pro Quiz/FORD_FUSION_2010_02.jpg",
   "img/Fotos pro Quiz/HONDA_ACCORD_2013_007.jpg",
   "img/Fotos pro Quiz/LancerQuiz.jpg",
-  "img/Fotos pro Quiz/mercedes-amg-e-53-hybrid-2025-003-20240312213633-1280x925.jpg"
+  "img/Fotos pro Quiz/mercedes-amg-e-53-hybrid-2025-003-20240312213633-1280x925.jpg",
+  "img/Fotos pro Quiz/volkswagen-kombi-bay-window-camper-uk-version-1972-09-20231128153818-1600x1200.jpg",
+  "img/Fotos pro Quiz/tesla-model-3-performance-2025-001-20240425101622-1280x925.jpg",
+  "img/Fotos pro Quiz/tesla-cybertruck-2025-01-20231205184907-1280x925.jpg",
+  "img/Fotos pro Quiz/subaru-impreza-wrx-sti-type-r-version-iv-1998-01-20231128152713-1600x1066.jpg",
+  "img/Fotos pro Quiz/porsche-macan-turbo-2025-004-20240427192828-1280x925.jpg",
+  "img/Fotos pro Quiz/porsche-cayenne-turbo-s-e-hybrid-black-metallic-2020-01-20231211210958-1600x1200.jpg",
+  "img/Fotos pro Quiz/porsche-911-carrera-4s-cabriolet-uk-versiion-2004-01-20231128150933-1600x1067.jpg",
+  "img/Fotos pro Quiz/ONIX PLUS MIDNIGHT 2021 01.jpg",
+  "img/Fotos pro Quiz/fiat-punto-2008-03-20220721193234-1024x740.jpg",
+  "img/Fotos pro Quiz/dodge-viper-gts-1997-04-20240205175257-1600x1067.jpg",
+  "img/Fotos pro Quiz/CITROEN C4 2021 002.jpg",
+  "img/Fotos pro Quiz/chevrolet-trailblazer-2025-01-20240430111714-1600x1067.jpg",
+  "img/Fotos pro Quiz/bmw-z3-m-1999-001-20240205174338-1600x1067.jpg",
+  "img/Fotos pro Quiz/bmw-i4-2025-003-20240425165159-1280x925.jpg",
+  "img/Fotos pro Quiz/acura-nsx-formula-red-1992-11-20240205173338-1600x1071.jpg"
 
 
 ];
@@ -57,6 +72,8 @@ function startGame() {
   
   shuffleQuestions(); // Embaralha as perguntas e as imagens
   displayNextQuestion();
+  $questionsContainer.classList.add("animate__animated", "animate__jackInTheBox");
+
   $background.style.backgroundImage = `url('${questionBackgrounds[currentQuestionIndex]}')`;
   $backgroundVideo.style.display = "none"; // Oculta o vídeo
 }
@@ -85,8 +102,15 @@ function displayNextQuestion() {
 
     newAnswer.addEventListener("click", selectAnswer);
   });
-}
 
+  // Adiciona a classe animate__jackInTheBox apenas quando necessário
+  $questionsContainer.classList.add("animate__animated", "animate__jackInTheBox");
+
+  // Remover a classe animate__jackInTheBox após a animação
+  setTimeout(() => {
+    $questionsContainer.classList.remove("animate__animated", "animate__jackInTheBox");
+  }, 1000); // Tempo de duração da animação (1000ms = 1 segundo)
+}
 function resetState() {
   while ($answersContainer.firstChild) {
     $answersContainer.removeChild($answersContainer.firstChild);
@@ -151,7 +175,6 @@ function finishGame() {
     </button>
   `;
 }
-
 const questions = [
   {
     question: "Qual é o modelo deste carro?",
@@ -341,6 +364,141 @@ const questions = [
       { text: "Mercedes-Benz C-Class", correct: false },
       { text: "Mercedes-Benz E-Class", correct: false },
       { text: "Bmw 320i", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Volksvagen Kombi", correct: true },
+      { text: "Fiat Fiorino", correct: false },
+      { text: "Renault Kangoo", correct: false },
+      { text: "Volkswagen Gol", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Tesla Model 3", correct: true },
+      { text: "Nissan Leaf", correct: false },
+      { text: "Chevrolet Bolt", correct: false },
+      { text: "Tesla Model S", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Tesla Cybertruck", correct: true },
+      { text: "Ford F-150", correct: false },
+      { text: "GMC Hummer EV", correct: false },
+      { text: "Tesla Model X", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Subaru Impreza", correct: true },
+      { text: "Mazda Mazda3", correct: false },
+      { text: "Toyota Corolla", correct: false },
+      { text: "Subaru Legacy", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Porsche Macan", correct: true },
+      { text: "Audi Q5", correct: false },
+      { text: "BMW X3", correct: false },
+      { text: "Porsche Cayenne", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Porsche Cayenne", correct: true },
+      { text: "Land Rover Range Rover Sport", correct: false },
+      { text: "Lamborghini Urus", correct: false },
+      { text: "Porsche Macan", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Porsche 911 Carrera", correct: true },
+      { text: "Audi R8", correct: false },
+      { text: "Mercedes-Benz AMG GT", correct: false },
+      { text: "Porsche 718 Cayman", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Onix Plus", correct: true },
+      { text: "Hyundai HB20S", correct: false },
+      { text: "Toyota Yaris Sedan", correct: false },
+      { text: "Chevrolet Prisma", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Fiat Punto", correct: true },
+      { text: "Renault Sandero", correct: false },
+      { text: "Fiat Argo", correct: false },
+      { text: "Fiat Uno", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Dodge Viper", correct: true },
+      { text: "Chevrolet Corvette", correct: false },
+      { text: "Dodge Challenger", correct: false },
+      { text: "Dodge Charger", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Citroen C4", correct: true },
+      { text: "Peugeot 308", correct: false },
+      { text: "Renault Megane", correct: false },
+      { text: "Citroen C3", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Chevrolet Trailblazer", correct: true },
+      { text: "GMC Acadia", correct: false },
+      { text: "Chevrolet Equinox", correct: false },
+      { text: "Chevrolet Traverse", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "BMW Z3", correct: true },
+      { text: "Audi TT", correct: false },
+      { text: "Mercedes-Benz SLK", correct: false },
+      { text: "BMW Z4", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "BMW i4", correct: true },
+      { text: "Tesla Model S", correct: false },
+      { text: "Audi e-tron GT", correct: false },
+      { text: "BMW i3", correct: false }
+    ]
+  },
+  {
+    question: "Qual é o modelo deste carro?",
+    answers: [
+      { text: "Acura", correct: true },
+      { text: "Lexus", correct: false },
+      { text: "Infiniti", correct: false },
+      { text: "Honda", correct: false }
     ]
   }
 ];

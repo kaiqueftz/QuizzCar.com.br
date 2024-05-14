@@ -1,14 +1,20 @@
  /* Estilos base */
- * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 button {
-  cursor: pointer;
+  cursor:pointer;
+}
+.animate__animated {
+  animation-duration: 0.9s;
 }
 
+.animate__jackInTheBox {
+  animation-name: jackInTheBox;
+}
 #background-video {
   position: fixed;
   top: 0;
@@ -94,12 +100,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'fonteGeral', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 .container {
-  background-color: rgba(18, 18, 20, 0.7);
+  background-color: rgba(0, 0, 0, 0.568);
   width: 90%;
   max-width: 800px;
   border: 2px solid #e1e1e6;
@@ -134,7 +140,7 @@ body {
 }
 
 .answer:disabled {
-  cursor: not-allowed;
+  cursor:default;
 }
 
 .next-question {
@@ -142,6 +148,7 @@ body {
 }
 
 .button {
+  font-family:'Montserrat';
   background-color: #4863f7;
   color: #fff;
   font-size: 16px;

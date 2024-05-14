@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="quiz.css">
+  <style>
+    /* Estilos para animação */
+    .container.animate__animated.animate__jackInTheBox {
+      --animate-duration: 1s;
+    }
+  </style>
   <script src="quiz.js" async></script>
 
   <title>Quiz JavaScript</title>
@@ -20,10 +27,10 @@
     Your browser does not support HTML5 video.
   </video>
   <div id="background" class="background"></div>
-  <div class="container">
+  <div class="container animate__animated animate__jackInTheBox">
     <div class="questions-container hide">
       <span class="question">Pergunta aqui?</span>
-      <div class="answers-container">
+      <div class="answers-container animate__animated animate__jackInTheBox">
         <button class="answer button">Resposta 1</button>
         <button class="answer button">Resposta 2</button>
         <button class="answer button">Resposta 3</button>
