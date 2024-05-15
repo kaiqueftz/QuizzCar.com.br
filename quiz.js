@@ -260,18 +260,18 @@ const questions = [
   {
     question: "Qual é o modelo deste carro?",
     answers: [
-      { text: "Ferrari Estradale Assetto", correct: true },
       { text: "Ferrari LaFerrari", correct: false },
       { text: "Ferrari 458 Italia", correct: false },
-      { text: "Ferrari F40", correct: false }
+      { text: "Ferrari F40", correct: false },
+      { text: "Ferrari Estradale Assetto", correct: true }
     ]
   },
   {
     question: "Qual é o modelo deste carro?",
     answers: [
-      { text: "Peugeot 206", correct: true },
-      { text: "Peugeot 308", correct: false },
       { text: "Peugeot 208", correct: false },
+      { text: "Peugeot 308", correct: false },
+      { text: "Peugeot 206", correct: true },
       { text: "Peugeot 3008", correct: false }
     ]
   },
@@ -297,8 +297,8 @@ const questions = [
   {
     question: "Qual é o modelo deste carro?",
     answers: [
-      { text: "Audi A5", correct: true },
       { text: "Audi A3", correct: false },
+      { text: "Audi A5", correct: true },
       { text: "Audi A4", correct: false },
       { text: "Audi Q5", correct: false }
     ]
