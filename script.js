@@ -42,6 +42,45 @@ buttonBmw.addEventListener('click', function() {
     buttonBmw.textContent = 'CONTINUAR';
 });
 
+var buttonFord = document.getElementById('btn-continuarFord');
+
+buttonFord.addEventListener('click', function() {
+    var card = document.querySelector('#ford')
+    card.classList.toggle('active');
+
+    if(card.classList.contains('active')) {
+        return buttonFord.textContent = 'FECHAR'
+    }
+
+    buttonFord.textContent = 'CONTINUAR';
+});
+
+var buttonVolvo = document.getElementById('btn-continuarVolvo');
+
+buttonVolvo.addEventListener('click', function() {
+    var card = document.querySelector('#volvo')
+    card.classList.toggle('active');
+
+    if(card.classList.contains('active')) {
+        return buttonVolvo.textContent = 'FECHAR'
+    }
+
+    buttonVolvo.textContent = 'CONTINUAR';
+});
+
+var buttonPeugeot = document.getElementById('btn-continuarPeugeot');
+
+buttonPeugeot.addEventListener('click', function() {
+    var card = document.querySelector('#peugeot')
+    card.classList.toggle('active');
+
+    if(card.classList.contains('active')) {
+        return buttonPeugeot.textContent = 'FECHAR'
+    }
+
+    buttonPeugeot.textContent = 'CONTINUAR';
+});
+
 //EFEITO LOGO-CLICK
 document.querySelectorAll('.logo-click').forEach(function(logo) { // Este loop forEach seleciona todas as divs com a classe 'logo-click' e adiciona um ouvinte de eventos de clique a cada uma.
     // Adiciona um ouvinte de eventos de clique a cada div de logo
